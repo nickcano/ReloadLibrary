@@ -9,7 +9,7 @@ ReloadLibrary("kernel32.dll");
 ReloadLibrary("ntdll.dll", GetModuleHandleA("kernel32.dll"));
 ```
 
-A call to `ReloadLibrary()` will return 0 on failure, otherwise returning the number of function pointers replaced in the import address table.
+A call to `ReloadLibrary()` will return 0 on failure, otherwise returning the number of function pointers replaced in the import address table. On success, you're done! Since the code replaces function pointers in the import address table, everything will happen transparently; just code as normal.
 
 # Development
 
